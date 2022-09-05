@@ -1,20 +1,37 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View,SafeAreaView,Platform } from 'react-native';
+import { TelaInicial } from './src/features/TelaInicial';
+import MiddlewareScren from './src/features/MiddlewareScreen';
+import { TelaPrincipal } from './src/features/TelaPrincipal';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+const Stack = createNativeStackNavigator();
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+    <StatusBar barStyle={'light-content'} />
+    <NavigationContainer>
+      <Stack.Navigator 
+        screenOptions={{
+          headerShown: false,
+        }}
+        >
+        <Stack.Screen
+          name="TelaInicial"
+          component={TelaInicial}
+        />
+        <Stack.Screen name="TelaPrincipal" component={MiddlewareScren} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  </SafeAreaView> 
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0
   },
 });
