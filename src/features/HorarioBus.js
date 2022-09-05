@@ -10,7 +10,6 @@ export const HorarioBus = () =>
             <Text
                 onPress={() => alert('Horario de Onibus')}
                 style={{ fontSize: 26, fontWeight: 'bold' }}>Horario de Onibus</Text>
-                <SideMenu/>
         </View>
 )
 
