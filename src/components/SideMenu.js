@@ -1,6 +1,6 @@
 ﻿import { createDrawerNavigator } from '@react-navigation/drawer';
 import { Opcoes } from '../features/Opcoes';
-import { HorarioBus } from '../features/HorarioBus';
+import { HorarioBus } from '../features/Bike';
 
 const Drawer = createDrawerNavigator();
 

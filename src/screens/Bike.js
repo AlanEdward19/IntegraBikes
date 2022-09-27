@@ -4,12 +4,12 @@ import MainContainer from "../components/MainContainer";
 import SideMenu from "../components/SideMenu";
 
 
-export const HorarioBus = () => 
+export const Bike = () => 
 (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             <Text
-                onPress={() => alert('Horario de Onibus')}
-                style={{ fontSize: 26, fontWeight: 'bold' }}>Horario de Onibus</Text>
+                onPress={() => alert('Informações de Bike')}
+                style={{ fontSize: 26, fontWeight: 'bold' }}>Informações de Bike</Text>
         </View>
 )
 

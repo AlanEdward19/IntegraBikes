@@ -14,7 +14,7 @@ import { TextInput } from "react-native-paper";
 
 import { BotaoLargo } from "../components/BotaoLargo";
 
-export const TelaLogin = ({ navigation }) =>
+export const TelaCadastroConta = ({ navigation }) =>
 (
     
 <LinearGradient colors={[cores.preto_claro,"#000"]} start={{x:0, y:0}}  end={{x:1,y:1}} style={styles.container}>
@@ -32,8 +32,8 @@ export const TelaLogin = ({ navigation }) =>
 
     <View style={styles.containerInputEmail}>
 
-        <Text style={styles.textoLogin}>Log in</Text>
-        <Text style={styles.subtituloTextoLogin}>Entre com as informacoes de sua conta</Text>
+        <Text style={styles.textoLogin}>Criar Conta</Text>
+        <Text style={styles.subtituloTextoLogin}>Entre com as informacoes para criar sua conta</Text>
 
         <TextInput
         activeUnderlineColor={cores.azul}
@@ -51,12 +51,10 @@ export const TelaLogin = ({ navigation }) =>
 
     </View>
 
-    <Text style={styles.esqueceuSenha}>Esqueceu sua senha?</Text>
-
     <View style={styles.botaoLogin}>
 
         <BotaoLargo 
-        title="Entrar" 
+        title="Criar uma Conta" 
         size={90}
         textColor={cores.branco}
         buttonColor={cores.azul}
@@ -68,8 +66,8 @@ export const TelaLogin = ({ navigation }) =>
 
     <Text 
         style={styles.cadastrar}
-        onPress={() => navigation.navigate("TelaCadastroConta")}>
-            Não possui uma conta? Cadastre-se
+        onPress={() => navigation.navigate("TelaLogin")}>
+            Já possui uma conta? Entre
     </Text>
     
 </LinearGradient>
@@ -157,15 +155,6 @@ const styles = StyleSheet.create({
         borderTopLeftRadius:20,
         borderBottomRightRadius:20,
         borderBottomLeftRadius:20
-    },
-
-    esqueceuSenha:{
-        alignSelf:"center",
-        position:"absolute",
-        bottom:180,
-        left:50,
-        fontSize:15,
-        color: cores.cinza
     },
     
     cadastrar:{

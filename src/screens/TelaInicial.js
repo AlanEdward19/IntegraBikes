@@ -50,7 +50,7 @@ export const TelaInicial = ({ navigation }) =>
         textColor={cores.azul_bb}
         buttonColor={cores.branco}
         borderColor={cores.preto_claro}
-        onPress={() => navigation.navigate("TelaPrincipal")}
+        onPress={() => navigation.navigate("TelaCadastroConta")}
         />
 
     </View>

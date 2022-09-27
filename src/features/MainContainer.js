@@ -5,15 +5,15 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { cores } from '../utils/cores';
 
 // Screens
-import { TelaPrincipal } from '../features/TelaPrincipal';
-import { HorarioBus } from '../features/HorarioBus';
-import { Opcoes } from '../features/Opcoes';
+import { TelaPrincipal } from '../screens/TelaPrincipal';
+import { Bike } from '../screens/Bike';
+import { Opcoes } from '../screens/Opcoes';
 
 //Screen names
 const homeName = "Tela Principal";
 const detailsName = "Details";
 const settingsName = "Opções";
-const Bus = "Horarios Onibus"
+const bike = "Bike"
 
 const Tab = createBottomTabNavigator();
 
@@ -37,8 +37,8 @@ function MainContainer() {
             } else if (rn === settingsName) {
               iconName = focused ? 'settings' : 'settings-outline';
             
-            }else if (rn === Bus) {
-              iconName = focused ? 'bus' : 'bus-outline';
+            }else if (rn === bike) {
+              iconName = focused ? 'bicycle' : 'bicycle-outline';
             }
 
 
@@ -57,7 +57,7 @@ function MainContainer() {
         }}>
 
         <Tab.Screen name={homeName} component={TelaPrincipal} />
-        <Tab.Screen name={Bus} component={HorarioBus} />
+        <Tab.Screen name={bike} component={Bike} />
         <Tab.Screen name={settingsName} component={Opcoes} />
 
 
