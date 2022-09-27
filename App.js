@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,SafeAreaView,Platform } from 'react-native';
-import { TelaInicial } from './src/features/TelaInicial';
+//import { TelaInicial } from './src/features/TelaInicial';
+import { TelaInicial } from './src/screens/TelaInicial';
 import MiddlewareScren from './src/features/MiddlewareScreen';
-import { TelaPrincipal } from './src/features/TelaPrincipal';
+import { TelaLogin } from './src/screens/TelaLogin';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const Stack = createNativeStackNavigator();
@@ -23,6 +24,7 @@ export default function App() {
           component={TelaInicial}
         />
         <Stack.Screen name="TelaPrincipal" component={MiddlewareScren} />
+        <Stack.Screen name="TelaLogin" component={TelaLogin} />
       </Stack.Navigator>
     </NavigationContainer>
   </SafeAreaView> 
