@@ -10,7 +10,7 @@ import { BikeCircle } from "../components/BikeCircle";
 
 //Screen
 
-export const TelaPrincipal = ({}) => (
+export const TelaPrincipal = ({navigation}) => (
   <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
     <View>
       
