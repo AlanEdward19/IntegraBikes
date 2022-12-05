@@ -19,13 +19,23 @@ export const Opcoes = ({navigation}) =>
 
                 </View>
 
-                <View style={styles.camposFundo}>
+                <View>
 
-                        <View style={styles.teste}>
+                        <View style={styles.top}>
 
                                 <BotaoLargo
-                                        style={styles.botaoMeuPerfil}
-                                        title="Meu perfil"
+                                        style={styles.botaoOpcoes}
+                                        title="OPÇÕES"
+                                        size={100}
+                                        textColor={cores.branco}
+                                        buttonColor={cores.black}
+                                        borderColor={cores.black}
+                                        onPress={() => navigation.navigate("Tela Principal")}
+                                />
+                                
+                                <BotaoLargo
+                                        style={styles.botaoPerfil}
+                                        title="PERFIL"
                                         size={90}
                                         textColor={cores.branco}
                                         buttonColor={cores.azul}
@@ -34,18 +44,8 @@ export const Opcoes = ({navigation}) =>
                                 />
 
                                 <BotaoLargo
-                                        style={styles.botaoPrivacidade}
-                                        title="Privacidade & Segurança"
-                                        size={90}
-                                        textColor={cores.branco}
-                                        buttonColor={cores.azul}
-                                        borderColor={cores.azul}
-                                        onPress={() => navigation.navigate("Tela Principal")}
-                                />
-
-                                <BotaoLargo
-                                        style={styles.botaoPagamentos}
-                                        title="Pagamentos"
+                                        style={styles.botaoCarteira}
+                                        title="CARTEIRA"
                                         size={90}
                                         textColor={cores.branco}
                                         buttonColor={cores.azul}
@@ -57,15 +57,15 @@ export const Opcoes = ({navigation}) =>
 
                 </View>
 
-                <View style={styles.botaoEncerrarSessao}>
+                <View style={styles.botaoHistorico}>
 
                         <BotaoLargo
-                                title="Encerrar Sessão"
-                                size={80}
+                                title="HISTÓRICO"
+                                size={90}
                                 textColor={cores.branco}
                                 buttonColor={cores.azul}
                                 borderColor={cores.azul}
-                                onPress={() => navigation.navigate("TelaPrincipal")}
+                                onPress={() => navigation.navigate("Tela Principal")}
                         />
 
                 </View>
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
                 borderBottomRightRadius: 60
         },
 
-        teste: {
+        top: {
                 top: 70
         },
         
@@ -96,28 +96,27 @@ const styles = StyleSheet.create({
                 backgroundColor: cores.preto_claro
         },
 
-        botaoMeuPerfil: {
+        botaoOpcoes: {
                 alignSelf: "center",
-                position: "absolute",
-                top: 70
+                position: "absolute",           
         },
 
-        botaoPrivacidade: {
+        botaoPerfil: {
                 alignSelf: "center",
                 position: "absolute",
                 top: 140
         },
 
-        botaoPagamentos: {
+        botaoCarteira: {
                 alignSelf: "center",
                 position: "absolute",
-                top: 210
+                top: 230
         },
 
-        botaoEncerrarSessao: {
+        botaoHistorico: {
                 alignSelf: "center",
                 position: "absolute",
-                bottom: 40
+                bottom: 360
         },
 
 
