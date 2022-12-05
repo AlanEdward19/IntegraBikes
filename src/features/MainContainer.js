@@ -8,6 +8,7 @@ import { cores } from '../utils/cores';
 import { TelaPrincipal } from '../screens/TelaPrincipal';
 import { Bike } from '../screens/Bike';
 import { Opcoes } from '../screens/Opcoes';
+import { ESaoBento } from '../screens/estacoes/ESaoBento';
 
 //Screen names
 const homeName = "Tela Principal";

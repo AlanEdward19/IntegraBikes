@@ -6,5 +6,7 @@
     azul:"#0D9AFF",
     azul_claro:"#3282B8",
     cinza:"#99A8B2",
-    cinza_claro:"#E6E6E6"
+    cinza_claro:"#E6E6E6",
+    verde: "#008000",
+    vermelho: "#FF0000"
 }
