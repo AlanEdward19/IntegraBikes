@@ -9,12 +9,10 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 //Componentes
 import { cores } from "../utils/cores";
-import { BotaoEsticado } from "../components/BotaoEsticado";
-import { TextInput } from "react-native-paper";
 
 import { BotaoLargo } from "../components/BotaoLargo";
 
-export const Opcoes = () =>
+export const Opcoes = ({navigation}) =>
 (
         <LinearGradient colors={[cores.cinza_claro, "#f3eae8"]} start={{ x: 0, y: 0 }} end={{ x: 2, y: 1 }} style={styles.container}>
                 <View style={{}}>
@@ -32,7 +30,7 @@ export const Opcoes = () =>
                                         textColor={cores.branco}
                                         buttonColor={cores.azul}
                                         borderColor={cores.azul}
-                                        onPress={() => navigation.navigate("TelaPrincipal")}
+                                        onPress={() => navigation.navigate("Tela Principal")}
                                 />
 
                                 <BotaoLargo
@@ -42,7 +40,7 @@ export const Opcoes = () =>
                                         textColor={cores.branco}
                                         buttonColor={cores.azul}
                                         borderColor={cores.azul}
-                                        onPress={() => navigation.navigate("TelaPrincipal")}
+                                        onPress={() => navigation.navigate("Tela Principal")}
                                 />
 
                                 <BotaoLargo
@@ -52,7 +50,7 @@ export const Opcoes = () =>
                                         textColor={cores.branco}
                                         buttonColor={cores.azul}
                                         borderColor={cores.azul}
-                                        onPress={() => navigation.navigate("TelaPrincipal")}
+                                        onPress={() => navigation.navigate("Tela Principal")}
                                 />
 
                         </View>
