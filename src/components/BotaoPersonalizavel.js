@@ -25,11 +25,11 @@ const styles = (size,textColor,buttonColor,borderColor, width, height) => ({
       borderRadius: size / 2,
       width: width,
       height: height,
-      alignItems: 'center',
+      alignItems: "center",
       justifyContent: "center",
       borderColor: borderColor,
       borderWidth: 2,
-      backgroundColor:buttonColor
+      backgroundColor:buttonColor,
     },
     text: { color: textColor, fontSize: size / 4 },
   });

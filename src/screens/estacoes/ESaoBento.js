@@ -6,8 +6,9 @@ import { cores } from "../../utils/cores";
 
 //Componentes
 import { BotaoPersonalizavel } from "../../components/BotaoPersonalizavel";
+import { BikeCircle } from "../../components/BikeCircle";
 
-export const ESaoBento = () => (
+export const ESaoBento = ({navigation}) => (
   <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
     <View>
 
@@ -32,11 +33,16 @@ export const ESaoBento = () => (
           buttonColor={cores.azul}
           borderColor={cores.azul}
           size={110}
+          
         />
 
       </View>
 
-      <View>
+      <View style={styles.bikes}>
+
+        <BikeCircle
+          buttonColor={cores.verde}
+        />
 
         <BikeCircle
           buttonColor={cores.verde}
@@ -45,8 +51,34 @@ export const ESaoBento = () => (
         <BikeCircle
           buttonColor={cores.vermelho}
         />
+        
+            <BikeCircle
+            buttonColor={cores.verde}
+          />
 
-      </View>
+          <BikeCircle
+            buttonColor={cores.vermelho}
+          />
+
+          <BikeCircle
+            buttonColor={cores.vermelho}
+          />
+      
+        
+          <BikeCircle
+            buttonColor={cores.verde}
+          />
+
+          <BikeCircle
+            buttonColor={cores.verde}
+          />
+
+          <BikeCircle
+            buttonColor={cores.vermelho}
+          />
+          
+        </View>
+ 
 
     </View>
 
@@ -58,11 +90,25 @@ const styles = StyleSheet.create({
     paddingBottom: 40,
     paddingLeft: 20,
     paddingRight: 20,
+    alignItems: "center"
   },
 
   botoes: {
-    paddingBottom: 25,
+    paddingBottom: 5,
     paddingLeft: 20,
     paddingRight: 20,
+    alignItems: "center"
   },
+
+  bikes:{
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20,
+    paddingTop: 30,
+    flexDirection: "row",
+    flex: 1,
+    alignItems: "flex-start",
+    flexWrap: "wrap"
+    
+  }
 });

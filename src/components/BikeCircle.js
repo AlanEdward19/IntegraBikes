@@ -8,7 +8,7 @@ export const BikeCircle = ({
   style = {},
   textStyle = {},
   buttonColor = cores.verde,
-  circle = 100,
+  circle = 80,
   ...props
 }) => {
   return (
@@ -26,5 +26,6 @@ const styles = (buttonColor, circle) => ({
       alignItems: 'center',
       justifyContent: "center",
       backgroundColor:buttonColor,
+      margin: 20
     }
   });
